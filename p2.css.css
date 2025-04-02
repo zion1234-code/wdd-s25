@@ -1,0 +1,83 @@
+/* Goal 1: Flex Container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.flex-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 150px; /* Adjusted to make items smaller */
+}
+
+.flex-item img {
+    width: 100px; /* Reduced image size */
+    height: 100px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Goal 2: Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted for smaller images */
+    grid-auto-rows: 150px;
+    align-content: start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item img {
+    width: 100px; /* Adjusted to match flex images */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Goal 3: Box Shadow Example */
+.box-shadow-example {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), 4px 6px 20px rgba(200, 236, 200, 0.5);
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 8px;
+}
+
+/* Goal 4: Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Goal 5: CSS Counter */
+body {
+    counter-reset: section-counter;
+}
+
+h2 {
+    counter-increment: section-counter;
+}
+
+h2::before {
+    content: "Section " counter(section-counter) ": ";
+    font-weight: bold;
+}
