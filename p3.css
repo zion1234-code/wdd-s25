@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    padding: 10px;
+    border: 2px solid green;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Filters */
+.filters {
+    width: 25%;
+    padding: 10px;
+    background: white;
+    border: 1px solid green;
+    margin-right: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 75%;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    padding: 20px;
+}
+
+.pagination a {
+    margin: 5px;
+    padding: 8px 12px;
+    border: 1px solid green;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        width: 100%;
+    }
+}
